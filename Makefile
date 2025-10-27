@@ -19,4 +19,4 @@ podman: build run
 
 .PHONY: routine
 routine:
-	bash learning/0001-sha.sh
+	bash learning/0002-ssh.sh
