@@ -5,6 +5,7 @@ help:
 	@echo "Targets:"
 	@echo "  podman-build    Build the container image."
 	@echo "  podman-run      Run the container and access the bash terminal with the current directory mounted."
+	@echo "  podman		     Build and Run the container and access the bash terminal with the current directory mounted."
 
 .PHONY: podman-build
 podman-build:
