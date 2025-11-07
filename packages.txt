@@ -1,0 +1,5 @@
+openssh-client
+nano
+curl
+net-tools
+make

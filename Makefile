@@ -3,20 +3,20 @@ help:
 	@echo "Usage: make [target]"
 	@echo ""
 	@echo "Targets:"
-	@echo "  build    Build the container image."
-	@echo "  run      Run the container and access the bash terminal with the current directory mounted."
+	@echo "  podman-build    Build the container image."
+	@echo "  podman-run      Run the container and access the bash terminal with the current directory mounted."
 
 .PHONY: podman-build
-build:
+podman-build:
 	podman build -f Containerfile -t kali-custom .
 
 .PHONY: podman-run
-run:
+podman-run:
 	podman run -it -v $(CURDIR):/workdir kali-custom
 
 .PHONY: podman
-podman: build run
+podman: podman-build podman-run
 
-.PHONY: routine
-routine:
-	bash learning/0002-ssh.sh
+.PHONY: run
+run:
+	bash learning/001-sha.sh
